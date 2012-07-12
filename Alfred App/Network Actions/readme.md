@@ -17,7 +17,7 @@ __Not anymore!__ Network Actions to the rescue! With Network Actions I can easil
 
 # Extension Installation and Setup
 __Step 1__  
-Download and install the Etension. To install all you have yo do is double click it and alfred will do the rest.  
+[Download](http://cl.ly/I1r0) and install the Etension. To install all you have yo do is double click it and alfred will do the rest.  
 __Step 2__  
 Edit a few basic values in the AppleScript, namely:  
 * The name of the VPN Service as seen in Network Settings;  
@@ -27,7 +27,7 @@ On first run you'll have to Register with Growl. Just open alfred and typ __nw g
 
 
 # Extension Usage
-__nw__ Will toggle the service on/off depending on it' state. It will also launch / kill any applications you may have defined earlier.  
+__nw__ Will toggle the service on/off depending on it' state. 
 __nw on__ Will simply connect the service;  
 __nw off__ Will simply disconnect the service;  
 __nw stat__ Will show the current state of the connection using Growl (or fallback method)
