@@ -9,7 +9,8 @@ You need the [Power Pack][4] in order to take advantage of these scripts.
 	The reasoning behind this was the fact that I work a lot from home and therefore I need to toggle the VPN on/off and know it's state quite frequently. I don't like the extra clutter of having that info on the menubar so enter Alfred and Growl.
 - **TaskPaper Timetracking**
 	A simple script to aid in tracking time spent on tasks in TaskPaper. Time is tracked in conjunction with [TicToc][5] and a *Special* tag qith the value of the task in TicToc.
-
+- **Scratch File**  
+	A simple extension to append text to a file (beginning or end) with Alfred.
 
 ## Geektool Script
 You need the Mac App Store version of [Geektool][2] installed for these to work.
