@@ -1,0 +1,6 @@
+syntax: glob
+nbproject
+yweather.py
+*.pyc
+*~
+tasks
