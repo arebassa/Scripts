@@ -20,6 +20,16 @@ You need the Mac App Store version of [Geektool][2] installed for these to work.
 - **Stitched Menubar**  
 	Just some more eyecandy that overlays a stitched pattern over the menubar and a script to toggle it on/off based on full screen apps running so it isn't in the way whil say, watching a movie.
 
+## Python
+These are just a few small script I found lying around (on BitBucket too) and decided to share them here, just to keep things coherent. They are one-off scripts that are not really developed.  
+- **SimpleTasks**  
+A simple tasklist fot OpenBox pipe menu and Conky.   
+*Note: I haven't tested this in ages and cannot vouch it will still work*
+
+- **GeditDjangoTools**  
+A collection of external tools for Gedit to aid Django development.  
+*Note: I haven't tested this in ages and cannot vouch it will still work*
+
 ## TaskPaper
 - **Timetracking**  
 	The same script as above but without the *personalization* for [Alfred][1]
