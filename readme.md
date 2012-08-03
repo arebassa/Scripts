@@ -7,8 +7,10 @@ You need the [Power Pack][4] in order to take advantage of these scripts.
 
 - **Network Actions**  
 	The reasoning behind this was the fact that I work a lot from home and therefore I need to toggle the VPN on/off and know it's state quite frequently. I don't like the extra clutter of having that info on the menubar so enter Alfred and Growl.
-- **TaskPaper Timetracking**
+- **TaskPaper Timetracking**  
 	A simple script to aid in tracking time spent on tasks in TaskPaper. Time is tracked in conjunction with [TicToc][5] and a *Special* tag qith the value of the task in TicToc.
+- **TaskPaper Extended Notes**  
+	A simple script that allows you to open a note/document based on a specific tag. You can define as many note/document types and which application they open in (rather than rely on default).
 - **Scratch File**  
 	A simple extension to append text to a file (beginning or end) with Alfred.
 
@@ -32,6 +34,8 @@ A collection of external tools for Gedit to aid Django development.
 
 ## TaskPaper
 - **Timetracking**  
+	The same script as above but without the *personalization* for [Alfred][1]
+- **Extended Notes**  
 	The same script as above but without the *personalization* for [Alfred][1]
 
 [1]:http://www.alfredapp.com
