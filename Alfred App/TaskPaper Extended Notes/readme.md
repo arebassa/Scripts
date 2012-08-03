@@ -15,14 +15,14 @@ The concept is a rather simple one. Have a tag that defines a certain type of fi
 **Tags and Paths**  
 This is where you need to be careful. The variable is a list in the manner of:  
 
-    set workList to {{"note", "outline"}, {docPath:"/Users/pedro/Dropbox/Notes/", ext:"txt"}, {docPath:"/Users/pedro/Dropbox/Outliner/", ext:"opml"}}
+    set workList to {{"note", "outline"}, {docPath:"/Users/pedro/Dropbox/Notes/", ext:"txt", appname:"nvALT"}, {docPath:"/Users/pedro/Dropbox/Outliner/", ext:"opml", appname:"Mindnode Lite"}}
 
 Breaking it down we have:  
 
 1. Item 1 is a list of your tags. In my case I have "Note" and "Outline"  
 2. Item 2 onwards is a list of records pertaining to each tag.  
 
-So in the above example, item 2 is a list of the **path** where you place docs related to your **Note** tag and the **extension** of your **Note** tag (some may prefer txt, md, mmd etc.)
+So in the above example, item 2 is a list of the **path** where you place docs related to your **Note** tag and the **extension** of your **Note** tag (some may prefer txt, md, mmd etc.). Finally we have the app with which you want to open the note (must be apps exact name, correct caps and all)
 Item 3 pertains to tag **outline**.  
 If you prefer more tags/document types then just expand on this.
 
@@ -51,6 +51,6 @@ I've got a few more things planned for this and other extensions. This is far fr
 [PowerPack]:http://cl.ly/I9Mc
 [Taskpaper]:http://cl.ly/I8eQ
 [2]:http://cl.ly/I0W9
-[1]:http://cl.ly/I8nP
+[1]:http://cl.ly/IWVd
 [GitHub]:http://cl.ly/I4Wz
 [3]:http://cl.ly/I3CP
