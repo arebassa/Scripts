@@ -51,6 +51,6 @@ I've got a few more things planned for this and other extensions. This is far fr
 [PowerPack]:http://cl.ly/I9Mc
 [Taskpaper]:http://cl.ly/I8eQ
 [2]:http://cl.ly/I0W9
-[1]:http://cl.ly/IWVd
+[1]:http://cl.ly/IXtA
 [GitHub]:http://cl.ly/I4Wz
 [3]:http://cl.ly/I3CP
