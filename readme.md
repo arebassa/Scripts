@@ -12,7 +12,9 @@ You need the [Power Pack][4] in order to take advantage of these scripts.
 - **TaskPaper Extended Notes**  
 	A simple script that allows you to open a note/document based on a specific tag. You can define as many note/document types and which application they open in (rather than rely on default).
 - **Scratch File**  
-	A simple extension to append text to a file (beginning or end) with Alfred.
+	A simple extension to append text to a file (beginning or end) with Alfred.  
+- **Alfred-Tagger**
+    A simple extension and automator worklfow to aid in tagging 1 or multiple files with 
 
 ## Geektool Script
 You need the Mac App Store version of [Geektool][2] installed for these to work.
