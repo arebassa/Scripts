@@ -24,4 +24,4 @@ A quick note on **searching**, to get Alfred to search your newly created tags, 
 [bit 4]: http://bit.ly/S3tHsp
 [cl]: http://cl.ly/JLjo/Alfred-Tagger.png
 [cl 2]: http://f.cl.ly/items/2x0A1T1c0N3b1H3H3T0a/Alfed-Extension-Download.png
-[github]: https://github.com/pslobo/Scripts/raw/master/Alfred%20App/Alfred-Tagger/Alfred-Tagger.zip
+[github]: http://bit.ly/OCRYWW
