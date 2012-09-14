@@ -9,7 +9,9 @@ Fortunately, there are a few alternatives that are provided freely. Of those, I 
 Fortunately, as is the case with so many of my little itches, the fix is rather quick. A simple little automator workflow triggered by [Alfred][bit 2] and voila, no need to take my hands off the keyboard. You will of course need the [Powerpack][bit 3] in order for this to work.
 
 ## Setup and Tips
-Download the pack below. You will find a zip file with the Extension and the Automator Workflow. Save the workflow any place of your choosing, import the extension and then update the path to point to where you saved the workflow.  
+Download the pack below. ~~You will find a zip file with the Extension and the Automator Workflow. Save the workflow any place of your choosing, import the extension and then update the path to point to where you saved the workflow.~~  
+**Update:** Thanks to a tip from [Lucifr](http://bit.ly/QXdomv) the Automator workflow is now part of the extension so all you need to doo is install it as you would any other extension.  
+
 All you need now if to assign a global hotkey to trigger the extension (or just summon Alfred and start typing **tagger**).  
 With this in place, you can now choose 1 or multiple files in finder, trigger the extension and tag away.
 
