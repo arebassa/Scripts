@@ -19,7 +19,7 @@ To assemble this backscratcher is rather easy.
 4. You can optionally create as many diferent extensions for each various file types you desire (I prefer it this way since it saves me from having to type the extension each time and hey... Alfred extensions are cheap...)
 
 ### OPML Workaround
-I currently use Scribe for my outlining needs on the Mac and for some odd reason it doesn't open empty opml files. Therefore I've come up with a small workaround for this particular case. Before using this however do test the above method. I know for a fact that Tree and Mindnode open empty .opml files just fine so your results may vary. If however you use Scribe or your app has a problem with empty opml files then install this [extension][bit 4]
+I currently use [Scribe](http://bit.ly/PwfM2C) for my outlining needs on the Mac and for some odd reason it doesn't open empty opml files. Therefore I've come up with a small workaround for this particular case. Before using this however do test the above method. I know for a fact that Tree and Mindnode open empty opml files just fine so your results may vary. If however you use Scribe or your app has a problem with empty opml files then install this [extension][bit 4]
 
 ## The End Result
 With this simple extension (well two actually) I've managed to speedup my workflow in a way I wasn't aware of until recently. Now I can just quickly summon Alfred, type in a file name and start writing without a second thought. Hopefuly this will prove useful to you too.
