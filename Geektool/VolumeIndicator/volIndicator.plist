@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>Old Volume</key>
-	<integer>0</integer>
+	<integer>25</integer>
 	<key>Volume State</key>
-	<true/>
+	<false/>
 </dict>
 </plist>
