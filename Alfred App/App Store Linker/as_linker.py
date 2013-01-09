@@ -20,7 +20,6 @@ import subprocess
 import argparse
 
 
-
 ### Set some variables needed for the script to work.
 
 # Set your affiliate link here.
@@ -29,55 +28,101 @@ itunes_search ='https://itunes.apple.com/search'
 
 
 def main():
-	"""Reads arguments and options and executes accordingly"""
 	
 	parser = argparse.ArgumentParser()
 	group = parser.add_mutually_exclusive_group()
-	group.add_argument("-m", "--mac", help="Mac App", action="store_true")
-	group.add_argument("-i", "--ipad", help="iPad App", action="store_true")
-	parser.add_argument('app_name', help = 'Type the Apps Name')
+	group.add_argument("-m", "--mac", help="Mac App", action="store_const", const="macSoftware")
+	group.add_argument("-i", "--ipad", help="iPad App", action="store_const", const="iPadSoftware")
+	group.add_argument("-s","--software", action="store_const", const="software")
+	parser.add_argument('-n','--num',metavar="N",help="Number of results to display",type=int,default=1)
+	parser.add_argument('-l','--link',help='Format markdown links',action='store_true')
+	parser.add_argument('app_name',metavar="App Name", nargs="+",help = 'Type the Apps Name')
 	args = 	parser.parse_args()
 
 	if args.mac:
-		entity="macSoftware" 	# Searches on for Mac Software
+		# Searches on for Mac Software
+		entity=args.mac 					
 	
 	elif args.ipad:
-		entity="iPadSoftware"	# Searches only for iPad Software
+		# Searches only for iPad Software
+		entity=args.ipad					
 		
-	term=args.app_name			# Get the name of the App
+	elif args.software:
+		# Search for iOS software?? Unclear from documentation
+		entity=args.software				
+		
+	# Get the name of the App
+	app=args.app_name		
 	
-	get_link(entity,term)		# Get the App's Affiliate Link
+	# Get the maximum number of results to return
+	limit=args.num
+	
+	# Get the App's Affiliate Link
+	result = getLink(entity,app,limit)		
 		
+	if args.link:
+		# Generate Markdown style links
+		link=markdownLink(result)	
+				
+	else:
+		# Get simple list of links
+		link=simpleLink(result)				
+	
+	# Copy the result to clipboard
+	setClipboardData(link)					
 
-def get_link(entity,term):
+
+
+def getLink(entity,app,limit):
 	"""Generate a correct Affiliate Link"""
-	
-	global affiliate_link
+
 	global itunes_search
 	
-	# Limit:1 will return only 1 result, usually the most accurate.
-	search_terms = {'term': term, 'media':'software','entity':entity,'limit':1}
-	
+	search_terms = {'term': app, 'media':'software','entity':entity,'limit':limit}
 	r = requests.get(itunes_search, params=search_terms)
 	data = r.json()
-
-	app_url = urllib2.quote(data["results"][0]['trackViewUrl'] + "?partnerId=30",'')
-	app_url = urllib2.quote(app_url, '')
-	# According to documentation, the search result must be percent-encoded TWICE.
-
-	link = affiliate_link + app_url		# Create the final link
+	
+	if data["resultCount"] != 0:
 		
-	setClipboardData(link)				# Copy to clipboard
+		app_data={}
+		for entry in data["results"]:
+			app_url = urllib2.quote(entry['trackViewUrl'] + "?partnerId=30")
+			app_url = urllib2.quote(app_url)
+			# According to documentation, the search result must be percent-encoded TWICE.
+
+			app_data[entry["trackCensoredName"]]=app_url
+		
+		return app_data
+		
+	else:
+		print 'No matches found for "%s"' %(app[0])
+		exit()
+
+
+def markdownLink(data):
+	"""Return a markdown formated string with name and URL"""
+	global affiliate_link
+	link=""
+	for name in data:
+		link=link+"[%s](%s)\n\n" %(name,affiliate_link + data[name])
+	return link
+
+	
+def simpleLink(data):
+	"""Return a simple string with the results"""
+	global affiliate_link
+	link=""	
+	for name in data:
+		link=link + affiliate_link + data[name]+"\n\n"
+	return link
 
 
 def setClipboardData(data):
 	"""Place data in Mac OS X clipboard."""
-	
 	p = subprocess.Popen(['pbcopy'], stdin=subprocess.PIPE)
 	p.stdin.write(data)
 	p.stdin.close()
 	retcode = p.wait()
-	
 	print "Link Copied to Clipboard"
 
 
