@@ -17,3 +17,5 @@ The script has only one required parameter, the apps name. the remainder of the 
       -s, --software
       -n N, --num N   Number of results to display
       -l, --link      Format markdown links
+
+The parameters can either be passed with the Alfred query or be hard coded into the extension itself.
