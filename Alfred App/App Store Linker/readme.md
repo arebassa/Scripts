@@ -3,7 +3,7 @@
 A simple script to generate App Store Affiliate Links. It's inteded to be used with Alfred (extension available) but can just as easily be used with any other type of launcher that supports launching scripts.
 
 ## Usage
-The script has only one required parameter, the apps name. the remainder of the paramenters are optional and simply aim to facilitate usage.
+The script has only one required parameter, the **App Name**. the remainder of the paramenters are optional and simply aim to facilitate usage.
 
     usage: as_linker.py [-h] [-m | -i | -s] [-n N] [-l] App Name [App Name ...]
 
