@@ -120,7 +120,7 @@ def simpleLink(data):
 def setClipboardData(data):
 	"""Place data in Mac OS X clipboard."""
 	p = subprocess.Popen(['pbcopy'], stdin=subprocess.PIPE)
-	p.stdin.write(data)
+	p.stdin.write(data.encode('utf8'))
 	p.stdin.close()
 	retcode = p.wait()
 	print "Link Copied to Clipboard"
