@@ -15,7 +15,7 @@ In order to limit the overhead of always having to query and generate a list of 
 
 	
 ## Installation
-Download and import or alternatively use AlfPT.
+[Download](http://bit.ly/10UFFP5) and import or alternatively use AlfPT.
 
 ## Usage
 Setup a hotkey to trigger each action to ease things.
