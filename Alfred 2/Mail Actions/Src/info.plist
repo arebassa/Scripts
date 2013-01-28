@@ -17,6 +17,8 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>21C041DA-6DD5-4ADA-A9EA-E4EF45DCECE2</key>
+		<array/>
 		<key>25DCB64F-1E2B-42EA-8A08-1E5C4E59E7F2</key>
 		<array>
 			<dict>
@@ -94,33 +96,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>output</key>
+				<key>escaping</key>
+				<integer>62</integer>
+				<key>script</key>
+				<string>osascript copyMsg.scpt "{query}"</string>
+				<key>type</key>
 				<integer>0</integer>
-				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Mail Actions</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>FDEE20EF-386A-40D3-BA75-A2A9DFBF92D6</string>
+			<string>81C0864A-69AD-4D1D-9E86-DF73D86A8616</string>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>escaping</key>
-				<integer>63</integer>
+				<integer>62</integer>
 				<key>script</key>
-				<string>osascript goto.scpt {query}</string>
+				<string>osascript goto.scpt "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -135,13 +129,13 @@
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
-				<integer>63</integer>
+				<integer>62</integer>
 				<key>keyword</key>
 				<string>mg</string>
 				<key>runningsubtext</key>
 				<string>Generating Mailbox List</string>
 				<key>script</key>
-				<string>osascript getList.scpt {query} 2&gt; error.log</string>
+				<string>osascript moveList.scpt "{query}" 2&gt; error.log</string>
 				<key>title</key>
 				<string>Go To Mailbox</string>
 				<key>type</key>
@@ -157,17 +151,19 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
-				<integer>63</integer>
-				<key>script</key>
-				<string>osascript copyMsg.scpt {query}</string>
-				<key>type</key>
+				<key>argument</key>
 				<integer>0</integer>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>1179914</integer>
+				<key>hotstring</key>
+				<string>A</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
-			<string>81C0864A-69AD-4D1D-9E86-DF73D86A8616</string>
+			<string>19442E09-0CCE-45B4-897A-DD3E35409BF9</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -175,7 +171,7 @@
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
-				<integer>63</integer>
+				<integer>62</integer>
 				<key>keyword</key>
 				<string>mm</string>
 				<key>runningsubtext</key>
@@ -215,9 +211,9 @@
 			<key>config</key>
 			<dict>
 				<key>escaping</key>
-				<integer>63</integer>
+				<integer>62</integer>
 				<key>script</key>
-				<string>osascript moveMsg.scpt {query}</string>
+				<string>osascript moveMsg.scpt "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -229,19 +225,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
 				<integer>0</integer>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>1179914</integer>
-				<key>hotstring</key>
-				<string>A</string>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Mail Actions</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>19442E09-0CCE-45B4-897A-DD3E35409BF9</string>
+			<string>FDEE20EF-386A-40D3-BA75-A2A9DFBF92D6</string>
 		</dict>
 	</array>
 	<key>uidata</key>
@@ -254,7 +256,7 @@
 		<key>21C041DA-6DD5-4ADA-A9EA-E4EF45DCECE2</key>
 		<dict>
 			<key>ypos</key>
-			<real>270</real>
+			<real>230</real>
 		</dict>
 		<key>25DCB64F-1E2B-42EA-8A08-1E5C4E59E7F2</key>
 		<dict>
@@ -274,12 +276,12 @@
 		<key>BD5E9CD4-F1FB-48C0-895C-BD0ACA31B38C</key>
 		<dict>
 			<key>ypos</key>
-			<real>270</real>
+			<real>230</real>
 		</dict>
 		<key>CE408544-895C-4723-A89C-E8847E72CDAD</key>
 		<dict>
 			<key>ypos</key>
-			<real>270</real>
+			<real>230</real>
 		</dict>
 		<key>FDEE20EF-386A-40D3-BA75-A2A9DFBF92D6</key>
 		<dict>
