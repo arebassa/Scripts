@@ -82,6 +82,17 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>E9E6AF8A-5CBE-4C2E-A402-2D33CBD238C3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DB66C558-D3C9-47F3-B773-6EE7BB082F3A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Pedro Lobo</string>
@@ -127,7 +138,7 @@
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>escaping</key>
 				<integer>62</integer>
 				<key>keyword</key>
@@ -141,7 +152,7 @@
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
@@ -164,6 +175,25 @@
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>19442E09-0CCE-45B4-897A-DD3E35409BF9</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>if [[ "{query}" = "info" ]]; then
+if ! $(open -a Marked README.md &gt;/dev/null 2&gt;&amp;1); then open README.md ;fi;
+elif [[ "{query}" = "change" ]]; then
+if ! $(open -a Marked CHANGE.md &gt;/dev/null 2&gt;&amp;1); then open CHANGE.md ;fi;
+fi</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DB66C558-D3C9-47F3-B773-6EE7BB082F3A</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -225,6 +255,41 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>keyword</key>
+				<string>minfo</string>
+				<key>script</key>
+				<string>echo "&lt;?xml version='1.0'?&gt;
+&lt;items&gt;
+	&lt;item uid='ma-info' arg='info'&gt;
+		&lt;title&gt;Mail Actions Info&lt;/title&gt;
+		&lt;subtitle&gt;Display Mail Actions Info &amp;amp; Usage&lt;/subtitle&gt;
+	&lt;/item&gt;
+	&lt;item uid='ma-change' arg='change'&gt;
+		&lt;title&gt;Mail Actions Change Log&lt;/title&gt;
+		&lt;subtitle&gt;Display Mail Actions Change Log&lt;/subtitle&gt;		
+	&lt;/item&gt;
+&lt;/items&gt;"</string>
+				<key>subtext</key>
+				<string>Display Mail Actions README</string>
+				<key>title</key>
+				<string>Display Mail Actions README</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E9E6AF8A-5CBE-4C2E-A402-2D33CBD238C3</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -282,6 +347,16 @@
 		<dict>
 			<key>ypos</key>
 			<real>230</real>
+		</dict>
+		<key>DB66C558-D3C9-47F3-B773-6EE7BB082F3A</key>
+		<dict>
+			<key>ypos</key>
+			<real>350</real>
+		</dict>
+		<key>E9E6AF8A-5CBE-4C2E-A402-2D33CBD238C3</key>
+		<dict>
+			<key>ypos</key>
+			<real>350</real>
 		</dict>
 		<key>FDEE20EF-386A-40D3-BA75-A2A9DFBF92D6</key>
 		<dict>
