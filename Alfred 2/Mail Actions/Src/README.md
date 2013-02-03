@@ -23,6 +23,8 @@ Setup a hotkey to trigger each action to ease things.
 - **mm** - Move the selected messages to the chosen folder;
 - **mm** - With ⌥ as modifier copies the messages rather than moving
 - **mg** - Go To the chosen folder.
+- **minfo** - Shows either **README** or **CHANGELOG**. Uses Marked by default or if not present will use your default markdown viewer/editor.
+- **minfo** - 
 
 
 ## Todo

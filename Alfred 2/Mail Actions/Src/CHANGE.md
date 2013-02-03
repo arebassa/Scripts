@@ -1,5 +1,8 @@
 ## Changelog
 
+### 03-02-2013
+- Added unread count next to each mailbox. If the mailbox has no unread emails then nothing is displayed.
+
 ### 29-01-2013
 - Added new action to display Info & Usage as well as Change Log.
 - Added support for Local Mailboxes.

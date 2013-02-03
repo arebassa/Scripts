@@ -107,23 +107,33 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
-				<integer>62</integer>
-				<key>script</key>
-				<string>osascript copyMsg.scpt "{query}"</string>
-				<key>type</key>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
 				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Mail Actions</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>81C0864A-69AD-4D1D-9E86-DF73D86A8616</string>
+			<string>FDEE20EF-386A-40D3-BA75-A2A9DFBF92D6</string>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>escaping</key>
 				<integer>62</integer>
+				<key>normalisation</key>
+				<integer>0</integer>
 				<key>script</key>
 				<string>osascript goto.scpt "{query}"</string>
 				<key>type</key>
@@ -137,12 +147,35 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>normalisation</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>if [[ "{query}" = "info" ]]; then
+if ! $(open -a Marked README.md &gt;/dev/null 2&gt;&amp;1); then open README.md ;fi;
+elif [[ "{query}" = "change" ]]; then
+if ! $(open -a Marked CHANGE.md &gt;/dev/null 2&gt;&amp;1); then open CHANGE.md ;fi;
+fi</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DB66C558-D3C9-47F3-B773-6EE7BB082F3A</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
 				<integer>62</integer>
 				<key>keyword</key>
 				<string>mg</string>
+				<key>normalisation</key>
+				<integer>0</integer>
 				<key>runningsubtext</key>
 				<string>Generating Mailbox List</string>
 				<key>script</key>
@@ -162,38 +195,19 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>1179914</integer>
-				<key>hotstring</key>
-				<string>A</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>19442E09-0CCE-45B4-897A-DD3E35409BF9</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>escaping</key>
-				<integer>63</integer>
+				<integer>62</integer>
+				<key>normalisation</key>
+				<integer>0</integer>
 				<key>script</key>
-				<string>if [[ "{query}" = "info" ]]; then
-if ! $(open -a Marked README.md &gt;/dev/null 2&gt;&amp;1); then open README.md ;fi;
-elif [[ "{query}" = "change" ]]; then
-if ! $(open -a Marked CHANGE.md &gt;/dev/null 2&gt;&amp;1); then open CHANGE.md ;fi;
-fi</string>
+				<string>osascript copyMsg.scpt "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>DB66C558-D3C9-47F3-B773-6EE7BB082F3A</string>
+			<string>81C0864A-69AD-4D1D-9E86-DF73D86A8616</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -204,6 +218,8 @@ fi</string>
 				<integer>62</integer>
 				<key>keyword</key>
 				<string>mm</string>
+				<key>normalisation</key>
+				<integer>0</integer>
 				<key>runningsubtext</key>
 				<string>Generating Mailbox List</string>
 				<key>script</key>
@@ -223,6 +239,8 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
 				<key>argument</key>
 				<integer>0</integer>
 				<key>hotkey</key>
@@ -242,6 +260,8 @@ fi</string>
 			<dict>
 				<key>escaping</key>
 				<integer>62</integer>
+				<key>normalisation</key>
+				<integer>0</integer>
 				<key>script</key>
 				<string>osascript moveMsg.scpt "{query}"</string>
 				<key>type</key>
@@ -261,6 +281,8 @@ fi</string>
 				<integer>63</integer>
 				<key>keyword</key>
 				<string>minfo</string>
+				<key>normalisation</key>
+				<integer>0</integer>
 				<key>script</key>
 				<string>echo "&lt;?xml version='1.0'?&gt;
 &lt;items&gt;
@@ -290,25 +312,21 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>output</key>
+				<key>action</key>
 				<integer>0</integer>
-				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Mail Actions</string>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>1179914</integer>
+				<key>hotstring</key>
+				<string>A</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
-			<string>FDEE20EF-386A-40D3-BA75-A2A9DFBF92D6</string>
+			<string>19442E09-0CCE-45B4-897A-DD3E35409BF9</string>
 		</dict>
 	</array>
 	<key>uidata</key>
