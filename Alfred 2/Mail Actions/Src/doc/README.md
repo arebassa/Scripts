@@ -18,15 +18,22 @@ In order to limit the overhead of always having to query and generate a list of 
 [Download](http://bit.ly/10UFFP5) and import or alternatively use AlfPT.
 
 ## Usage
-Setup a hotkey to trigger each action to ease things.
+### Keywords
 
 - **mm** - Move the selected messages to the chosen folder;
 - **mm** - With ⌥ as modifier copies the messages rather than moving
 - **mg** - Go To the chosen folder.
+- **mgu** - Show list of mailboxes with unread messages
 - **minfo** - Shows either **README** or **CHANGELOG**. Uses Marked by default or if not present will use your default markdown viewer/editor.
-- **minfo** - 
 
+### Hotkeys
+- **⇧⌘A** - Toggle script to Move/Copy messages
+- **⇧⌘Z** - Toggle script to Go To Mailbox;
+- **⇧⌘R** - Mark every unread message in current mailbox as read;
+- **⇧⌘D** - Delete every message in current mailbox!! (USe with caution)
+- **⌘U** - Show list of mailboxes with unread messages
 
 ## Todo
 1. Implement an action to update the cache on demand;
-2. Integrate other useful workflows such as send to evernote/taskpaper etc.;
+2. Filter the list of mailboxes with unread email
+3. Integrate other useful workflows such as send to evernote/taskpaper etc.;
