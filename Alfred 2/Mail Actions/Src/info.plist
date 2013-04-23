@@ -60,6 +60,17 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>6B826D52-1104-403E-9E66-F810798D5A0A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7D527ABB-D3FF-45F6-9C55-420A07D93217</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>81C0864A-69AD-4D1D-9E86-DF73D86A8616</key>
 		<array>
 			<dict>
@@ -76,6 +87,17 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>DBDEAD31-0C34-43C9-8E06-CF59B3E2926A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>A04AD895-20F1-4B32-B0C7-05EA27E4358C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6B826D52-1104-403E-9E66-F810798D5A0A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -153,17 +175,15 @@
 			<dict>
 				<key>escaping</key>
 				<integer>62</integer>
-				<key>normalisation</key>
-				<integer>0</integer>
 				<key>script</key>
-				<string>osascript copyMsg.scpt "{query}"</string>
+				<string>osascript moveMsg.scpt "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>81C0864A-69AD-4D1D-9E86-DF73D86A8616</string>
+			<string>391E7933-3D32-4068-9EF8-B51394779F12</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -171,15 +191,13 @@
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
-				<integer>62</integer>
+				<integer>38</integer>
 				<key>keyword</key>
 				<string>mm</string>
-				<key>normalisation</key>
-				<integer>0</integer>
 				<key>runningsubtext</key>
 				<string>Generating Mailbox List</string>
 				<key>script</key>
-				<string>osascript getList.scpt {query} 2&gt; error.log</string>
+				<string>osascript getList.scpt "{query}"</string>
 				<key>title</key>
 				<string>Move Selected Messages</string>
 				<key>type</key>
@@ -198,150 +216,22 @@
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
-				<integer>3</integer>
-				<key>argumenttext</key>
-				<string>del</string>
+				<integer>0</integer>
 				<key>hotkey</key>
-				<integer>2</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
 				<integer>1179648</integer>
 				<key>hotstring</key>
-				<string>D</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>EF752BA1-D709-4A16-BC6E-685CA7B9AF2A</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>1179914</integer>
-				<key>hotstring</key>
 				<string>A</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>19442E09-0CCE-45B4-897A-DD3E35409BF9</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>hotkey</key>
-				<integer>6</integer>
-				<key>hotmod</key>
-				<integer>1179914</integer>
-				<key>hotstring</key>
-				<string>Z</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>BD5E9CD4-F1FB-48C0-895C-BD0ACA31B38C</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>62</integer>
-				<key>normalisation</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>osascript goto.scpt "{query}"</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>21C041DA-6DD5-4ADA-A9EA-E4EF45DCECE2</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>63</integer>
-				<key>keyword</key>
-				<string>mgu</string>
-				<key>normalisation</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>osascript getUnread.scpt {query} </string>
-				<key>subtext</key>
-				<string>Go To Mailbox</string>
-				<key>title</key>
-				<string>Mailboxes With Unread Messages</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>BBD32B97-FCA0-4D02-83DC-5F48E5B6C897</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>62</integer>
-				<key>keyword</key>
-				<string>mg</string>
-				<key>normalisation</key>
-				<integer>0</integer>
-				<key>runningsubtext</key>
-				<string>Generating Mailbox List</string>
-				<key>script</key>
-				<string>osascript moveList.scpt "{query}" 2&gt; error.log</string>
-				<key>title</key>
-				<string>Go To Mailbox</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>CE408544-895C-4723-A89C-E8847E72CDAD</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>63</integer>
-				<key>normalisation</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>if [[ "{query}" = "info" ]]; then
-if ! $(open -a Marked doc/README.md &gt;/dev/null 2&gt;&amp;1); then open README.md ;fi;
-elif [[ "{query}" = "change" ]]; then
-if ! $(open -a Marked doc/CHANGE.md &gt;/dev/null 2&gt;&amp;1); then open CHANGE.md ;fi;
-fi</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>DB66C558-D3C9-47F3-B773-6EE7BB082F3A</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -369,6 +259,109 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>62</integer>
+				<key>script</key>
+				<string>osascript copyMsg.scpt "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>81C0864A-69AD-4D1D-9E86-DF73D86A8616</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>hotkey</key>
+				<integer>6</integer>
+				<key>hotmod</key>
+				<integer>655360</integer>
+				<key>hotstring</key>
+				<string>Z</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>BD5E9CD4-F1FB-48C0-895C-BD0ACA31B38C</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>38</integer>
+				<key>keyword</key>
+				<string>mg</string>
+				<key>runningsubtext</key>
+				<string>Generating Mailbox List</string>
+				<key>script</key>
+				<string>osascript moveList.scpt "{query}"</string>
+				<key>title</key>
+				<string>Go To Mailbox</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>CE408544-895C-4723-A89C-E8847E72CDAD</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>62</integer>
+				<key>script</key>
+				<string>osascript goto.scpt "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>21C041DA-6DD5-4ADA-A9EA-E4EF45DCECE2</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>38</integer>
+				<key>keyword</key>
+				<string>mgu</string>
+				<key>script</key>
+				<string>osascript getUnread.scpt "{query}"</string>
+				<key>subtext</key>
+				<string>Go To Mailbox</string>
+				<key>title</key>
+				<string>Mailboxes With Unread Messages</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>BBD32B97-FCA0-4D02-83DC-5F48E5B6C897</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -379,11 +372,99 @@ fi</string>
 				<integer>1048576</integer>
 				<key>hotstring</key>
 				<string>U</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>4633E564-3237-4315-BD7D-2D05F860B0DC</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>read</string>
+				<key>hotkey</key>
+				<integer>46</integer>
+				<key>hotmod</key>
+				<integer>1703936</integer>
+				<key>hotstring</key>
+				<string>M</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>91222E63-F8AB-4999-A0C1-B83B5D133F06</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>osascript actions.scpt {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DBDEAD31-0C34-43C9-8E06-CF59B3E2926A</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>del</string>
+				<key>hotkey</key>
+				<integer>2</integer>
+				<key>hotmod</key>
+				<integer>1703936</integer>
+				<key>hotstring</key>
+				<string>D</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>EF752BA1-D709-4A16-BC6E-685CA7B9AF2A</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>if [[ "{query}" = "info" ]]; then
+if ! $(open -a Marked doc/README.md &gt;/dev/null 2&gt;&amp;1); then open README.md ;fi;
+elif [[ "{query}" = "change" ]]; then
+if ! $(open -a Marked doc/CHANGE.md &gt;/dev/null 2&gt;&amp;1); then open CHANGE.md ;fi;
+fi</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DB66C558-D3C9-47F3-B773-6EE7BB082F3A</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -394,8 +475,6 @@ fi</string>
 				<integer>63</integer>
 				<key>keyword</key>
 				<string>minfo</string>
-				<key>normalisation</key>
-				<integer>0</integer>
 				<key>script</key>
 				<string>echo "&lt;?xml version='1.0'?&gt;
 &lt;items&gt;
@@ -425,75 +504,104 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
-				<integer>63</integer>
-				<key>normalisation</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>osascript actions.scpt {query}</string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+
+(*
+Speed up Mail.app by vacuuming the Envelope Index
+Code from: http://www.hawkwings.net/2007/03/03/scripts-to-automate-the-mailapp-envelope-speed-trick/
+Originally by "pmbuko" with modifications by Romulo
+Updated by Brett Terpstra 2012 &lt;http://brettterpstra.com&gt;
+*)
+ 
+tell application "Mail" to quit
+set sizeBefore to do shell script "ls -lah ~/Library/Mail/V2/MailData | grep -E 'Envelope Index$' | awk {'print $5'}"
+do shell script "/usr/bin/sqlite3 ~/Library/Mail/V2/MailData/Envelope\\ Index vacuum"
+set sizeAfter to do shell script "ls -lah ~/Library/Mail/V2/MailData | grep -E 'Envelope Index$' | awk {'print $5'}"
+tell application "Mail" to activate
+return ("Before: " &amp; sizeBefore &amp; return &amp; "After: " &amp; sizeAfter)
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.action.applescript</string>
 			<key>uid</key>
-			<string>DBDEAD31-0C34-43C9-8E06-CF59B3E2926A</string>
+			<string>6B826D52-1104-403E-9E66-F810798D5A0A</string>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
-				<integer>62</integer>
-				<key>normalisation</key>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
 				<integer>0</integer>
-				<key>script</key>
-				<string>osascript moveMsg.scpt "{query}"</string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Mail Index</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>391E7933-3D32-4068-9EF8-B51394779F12</string>
+			<string>7D527ABB-D3FF-45F6-9C55-420A07D93217</string>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>3</integer>
-				<key>argumenttext</key>
-				<string>read</string>
-				<key>hotkey</key>
-				<integer>15</integer>
-				<key>hotmod</key>
-				<integer>1179648</integer>
-				<key>hotstring</key>
-				<string>R</string>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>mvacuum</string>
+				<key>text</key>
+				<string>Vacuum Mail for speed boost</string>
+				<key>withspace</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>91222E63-F8AB-4999-A0C1-B83B5D133F06</string>
+			<string>A04AD895-20F1-4B32-B0C7-05EA27E4358C</string>
 		</dict>
 	</array>
+	<key>readme</key>
+	<string># Usage
+## Keywords
+
+* mm - Move the selected messages to the chosen folder;
+* mm - With ⌥ as modifier copies the messages rather than moving
+* mg - Go To the chosen folder.
+* mgu - Show list of mailboxes with unread messages
+* minfo - Shows either **README** or **CHANGELOG**. Uses Marked by default or if not present will use your default markdown viewer/editor.
+
+## Hotkeys
+* ⇧⌘A - Toggle script to Move/Copy messages
+* ⇧⌘Z - Toggle script to Go To Mailbox;
+* ⇧⌘R - Mark every unread message in current mailbox as read;
+* ⇧⌘D - Delete every message in current mailbox!! (USe with caution)
+* ⌘U - Show list of mailboxes with unread messages</string>
 	<key>uidata</key>
 	<dict>
 		<key>19442E09-0CCE-45B4-897A-DD3E35409BF9</key>
 		<dict>
 			<key>ypos</key>
-			<real>10</real>
+			<real>60</real>
 		</dict>
 		<key>21C041DA-6DD5-4ADA-A9EA-E4EF45DCECE2</key>
 		<dict>
 			<key>ypos</key>
-			<real>210</real>
+			<real>260</real>
 		</dict>
 		<key>25DCB64F-1E2B-42EA-8A08-1E5C4E59E7F2</key>
 		<dict>
 			<key>ypos</key>
-			<real>10</real>
+			<real>60</real>
 		</dict>
 		<key>391E7933-3D32-4068-9EF8-B51394779F12</key>
 		<dict>
@@ -505,6 +613,16 @@ fi</string>
 			<key>ypos</key>
 			<real>310</real>
 		</dict>
+		<key>6B826D52-1104-403E-9E66-F810798D5A0A</key>
+		<dict>
+			<key>ypos</key>
+			<real>740</real>
+		</dict>
+		<key>7D527ABB-D3FF-45F6-9C55-420A07D93217</key>
+		<dict>
+			<key>ypos</key>
+			<real>740</real>
+		</dict>
 		<key>81C0864A-69AD-4D1D-9E86-DF73D86A8616</key>
 		<dict>
 			<key>ypos</key>
@@ -514,6 +632,11 @@ fi</string>
 		<dict>
 			<key>ypos</key>
 			<real>410</real>
+		</dict>
+		<key>A04AD895-20F1-4B32-B0C7-05EA27E4358C</key>
+		<dict>
+			<key>ypos</key>
+			<real>740</real>
 		</dict>
 		<key>BBD32B97-FCA0-4D02-83DC-5F48E5B6C897</key>
 		<dict>
@@ -538,7 +661,7 @@ fi</string>
 		<key>DBDEAD31-0C34-43C9-8E06-CF59B3E2926A</key>
 		<dict>
 			<key>ypos</key>
-			<real>410</real>
+			<real>460</real>
 		</dict>
 		<key>E9E6AF8A-5CBE-4C2E-A402-2D33CBD238C3</key>
 		<dict>
@@ -553,7 +676,7 @@ fi</string>
 		<key>FDEE20EF-386A-40D3-BA75-A2A9DFBF92D6</key>
 		<dict>
 			<key>ypos</key>
-			<real>10</real>
+			<real>70</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>

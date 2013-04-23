@@ -1,15 +1,24 @@
+Title: 		Introducing Mail Actions
+Author:		Pedro Lobo
+Web:		http://palobo.tumblr.com
+Keywords:		Alfred 2
+		Workflow
+		Mail
+Version:		0.6.1
+
 # Introducing Mail Actions
 Go crazy minimal with **Mail.app** and still stay functional thanks to the power of Alfred 2 Workflows.
 
 ## Features
 Use Alfred to:
+
 - Navigate Mailboxes from Alfred.  
 	Drill down to the Mailbox you want and action the result.
 - Move/Copy selected emails with Alfred.  
 	Type a few keywords to choose the desired folder. ↩ to move, ⌥+↩ to copy.
 	
-###Optimizations
-In order to limit the overhead of always having to query and generate a list of all Mailboxes, the workflow store the information in a plist file that is updated every 7 days. The file is located at:  
+### Optimisations
+In order to limit the overhead of always having to query and generate a list of all Mailboxes, the workflow stores the information in a plist file that is updated every 7 days. The file is located at:  
 
 	~/Library/Application Support/Alfred 2/Workflow Data/com.palobo.mailactions/mbCache.plist
 

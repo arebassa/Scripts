@@ -1,5 +1,8 @@
 ## Changelog
 
+### 23-04-2013
+- FIXED: Code optimisation by [Carlos-SZ](http://www.alfredforum.com/user/660-carlos-sz/). Results are now limited to 20 mailboxes at a time. XML Encoding has also been optimised.
+
 ### 04-02-2013
 - FIXED: Unread count was getting stored with folder list and not being updated on each run;
 - NEW: Hotkey to mark all messages (unread messages in current mailbox) as read

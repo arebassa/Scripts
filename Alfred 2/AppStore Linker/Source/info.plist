@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.palobo.appstorelinker</string>
+	<key>connections</key>
+	<dict>
+		<key>C368BA27-7B82-4E7C-BDA5-E48B2F986B14</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>12EA159C-42C0-4505-93C2-CA6BF5804C10</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4BCB72BD-8C57-4C77-B58D-36421F3D4916</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D44E72A3-EAAB-40C0-80BA-1BC7DB0641D9</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Copy simple link</string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Pedro Lobo</string>
+	<key>description</key>
+	<string>Generate App Store Affiliate Links</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>App Store Linker</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>Link Copied to Clipboard</string>
+				<key>title</key>
+				<string>App Store Link</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>12EA159C-42C0-4505-93C2-CA6BF5804C10</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>li</string>
+				<key>script</key>
+				<string>AFL="http://click.linksynergy.com/fs-bin/stat?id=kA8hpmfqRAo&amp;offerid=146261&amp;type=3&amp;subid=0&amp;tmpid=1826&amp;RD_PARM1="
+
+COUNTRY="US"
+
+python as_linker.py {query} ${AFL} 2&amp;&gt;1 &gt;&gt; error.log
+</string>
+				<key>subtext</key>
+				<string>Generate App Store affiliate link for '{query}'</string>
+				<key>title</key>
+				<string>App Store Linker</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>C368BA27-7B82-4E7C-BDA5-E48B2F986B14</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>import utils
+
+utils.simpleLink('{query}')</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>D44E72A3-EAAB-40C0-80BA-1BC7DB0641D9</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>import utils
+
+utils.markdownLink('{query}')</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>4BCB72BD-8C57-4C77-B58D-36421F3D4916</string>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>12EA159C-42C0-4505-93C2-CA6BF5804C10</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>4BCB72BD-8C57-4C77-B58D-36421F3D4916</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>C368BA27-7B82-4E7C-BDA5-E48B2F986B14</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>D44E72A3-EAAB-40C0-80BA-1BC7DB0641D9</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>palobo.tumblr.com</string>
+</dict>
+</plist>
