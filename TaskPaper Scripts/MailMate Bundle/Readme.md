@@ -23,7 +23,7 @@ This will create a task (email subject) and note (message:// url) in a document 
 	defaults write com.freron.MailMate MmDefaultTaskPaperFile -string "Work.taskpaper"
 
 **TaskPaper Project:**  
-The project where the task will be created. It can be any of your choosing and it doesn’t require adding the semicollons.
+The project where the task will be created. It can be any of your choosing and it doesn’t require adding the semicolons.
 
 	defaults write com.freron.MailMate MmDefaultTaskPaperProject -string "Inbox"
 
