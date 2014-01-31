@@ -1,0 +1,6 @@
+{	"contactEmailRot13" = "pedro@plobo.net";
+	contactName = "Pedro Lobo";
+	description = "Create a TaskPaper entry from a MailMate message.";
+	name = "TaskPaper";
+	uuid = "0B616800-890D-11E3-BAA8-0800200C9A66";
+}

@@ -1,0 +1,7 @@
+{
+	name          = 'Send to FrontMost...';
+	environment   = 'MM_SUBJECT=${subject.prefix:+${subject.prefix} }${subject.blob:+[${subject.blob}] }${subject.body}\nMM_MESSAGE_ID=${message-id.split}\n';
+	command       = '#!/bin/bash\n"${MM_BUNDLE_SUPPORT}/bin/add_front"';
+	keyEquivalent = "^A";
+	uuid          = 'E4217D10-8A7A-11E3-BAA8-0800200C9A66';
+}
