@@ -1,6 +1,6 @@
 # TaskPaper Bundle for MailMate
 
-[Download](http://d.pr/f/cgwG), uncompress and place `TaskPaper.mmBundle` in `/Applications/MailMate.app/Contents/SharedSupport/Bundles`
+[Download](http://d.pr/f/cgwG), uncompress and place `TaskPaper.mmBundle` in `~/Library/Application Support/MailMate/Bundles/`
 
 ## Usage
 Simply select an email and hit ^⇧A. There are two options:
