@@ -15,12 +15,9 @@ mm_url = 'message:////%3c' + urllib2.quote( os.getenv('MM_MESSAGE_ID','') ) + '%
 
 output = os.path.join(tp_path, tp_file)
 
-
 for line in fileinput.input(output, inplace=1):
-  if line.startswith(tp_project):
-    processing = True
-  else:
-    if processing:
-      print '\t- ' + mm_subject + '\n\t\t' + mm_url
-    processing = False
-  print line,
+	if line.startswith(tp_project):
+		print line,
+		print '\t- ' + mm_subject + '\n\t\t' + mm_url
+ 	else:
+		print line,
