@@ -66,6 +66,8 @@
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>12EA159C-42C0-4505-93C2-CA6BF5804C10</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -75,7 +77,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>li</string>
+				<string>asli</string>
 				<key>script</key>
 				<string>AFL="http://click.linksynergy.com/fs-bin/stat?id=kA8hpmfqRAo&amp;offerid=146261&amp;type=3&amp;subid=0&amp;tmpid=1826&amp;RD_PARM1="
 
@@ -96,23 +98,8 @@ python as_linker.py {query} ${AFL} 2&amp;&gt;1 &gt;&gt; error.log
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>C368BA27-7B82-4E7C-BDA5-E48B2F986B14</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>63</integer>
-				<key>script</key>
-				<string>import utils
-
-utils.simpleLink('{query}')</string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.script</string>
-			<key>uid</key>
-			<string>D44E72A3-EAAB-40C0-80BA-1BC7DB0641D9</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -130,6 +117,27 @@ utils.markdownLink('{query}')</string>
 			<string>alfred.workflow.output.script</string>
 			<key>uid</key>
 			<string>4BCB72BD-8C57-4C77-B58D-36421F3D4916</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>import utils
+
+utils.simpleLink('{query}')</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>D44E72A3-EAAB-40C0-80BA-1BC7DB0641D9</string>
+			<key>version</key>
+			<integer>0</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -158,6 +166,6 @@ utils.markdownLink('{query}')</string>
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string>palobo.tumblr.com</string>
+	<string>http://blog.plobo.net</string>
 </dict>
 </plist>
